@@ -22,7 +22,7 @@ $$ \| J_c s + F(x_c) \| \le \eta_c \|F(x_c)\|.$$
 
 In both cases you want the "forcing constant" $\eta_c \to 0$. This guarantees superlinear convergence. In practice it can be tricky to balance between having $\eta_c$ approach zero slowly (so that we don't over-solve inaccurate models) and quickly (to be able to capture the asymptotic quadratic convergence). A typical formula is 
 
-$$ \eta_c \ \frac{1}{2} \min\left\{  1, \sqrt{\|g_c\|/\|g_0\|}  \right}.$$
+$$ \eta_c =  \frac{1}{2} \min\left\{  1, \sqrt{\|g_c\|/\|g_0\|}  \right}.$$
 
 This helps to make $\eta_c$ get small when we get close to optimality. 
 
@@ -32,7 +32,7 @@ Another potential advantage of using inner Krylov iterations is that we don't ne
 
 $$J(x_c) u \approx \frac{F(x_c+\delta u) - F(x_c)}{\delta},$$
 
-which requires just one new evaluation of $F$. Sometimes it's recommended that one use $u/\|u\|$ in place of $u$. 
+which requires just one new evaluation of $F$. Sometimes it's recommended that one use $u/\\|u\\|$ in place of $u$. 
 
 For minimization, if we have exact gradients, then we can use the formula above with $\nabla f$. If not, then AFAIK there's no way in general to avoid doing $m$ differences to get the gradient, then doing a directional difference as above. 
 

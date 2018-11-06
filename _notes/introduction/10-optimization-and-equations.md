@@ -1,7 +1,7 @@
 ---
 layout: note
 chapter: "Introduction"
-title: "Optimzation and nonlinear equations"
+title: "Optimization and nonlinear equations"
 ---
 * TOC
 {:toc}
@@ -36,4 +36,4 @@ It's worth taking a moment to consider what we can expect when solving these pro
 
 For the rootfinding problem, the "data" is the function $F$. Thus we are interested in the variation of the root $r$ with respect to $F$; i.e. the inverse of the Jacobian matrix $F'(r)$. (Or in the expansion above, a perturbation in the value is linked to $(x-r)$ by the inverse of $F'(r)$.) So for instance, if $F'(r)$ is singular, then we know that a perturbation of the root in a singular direction will remain (to first order) a root, so the root is ill-posed. The condition number of $F'(r)$ is more generally a good indicator of root sensitivity. Note that this generalizes what we already know from the linear problem $F(x)=Ax-b$.
 
-For the minimization problem, at a smooth minimizer $r$ we have $\nablaf=0$ in the expansion above. Thus a perturbation to $f$ of size $\epsilon$ suggests that $\|x-r\|=O(\sqrt{\epsilon})$. In other words, even in the best case we are going to lose half of machine precision. Furthermore, the $O()$ hides a constant that grows as the Hessian nears singularity. 
+For the minimization problem, at a smooth minimizer $r$ we have $\nabla f=0$ in the expansion above. Thus a perturbation to $f$ of size $\epsilon$ suggests that $\\|x-r\\|=O(\sqrt{\epsilon})$. In other words, even in the best case we are going to lose half of machine precision. Furthermore, the $O()$ hides a constant that grows as the Hessian nears singularity. 

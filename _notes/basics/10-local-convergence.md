@@ -6,7 +6,7 @@ title: "Local convergence"
 * TOC
 {:toc}
 
-For concreteness, let's stick to the problem of minimizing $f$. We seek a local minimizer $r$ such that $\nabla f(r)=0$ and $\nabla^2 f(r)$ is positive definite. For technical reasons it's convenient to add a Lipschitz condition, $\| \nabla^ f(x) - \nabla^ f(y) \| \le \gamma \|x-y\|$ for a constant $\gamma$ and all $x$, $y$ in a neighborhood of $r$. 
+For concreteness, let's stick to the problem of minimizing $f$. We seek a local minimizer $r$ such that $\nabla f(r)=0$ and $\nabla^2 f(r)$ is positive definite. For theoretical reasons it's convenient to add a Lipschitz condition, $\\| \nabla f(x) - \nabla f(y) \\| \le \gamma \\|x-y\\|$ for a constant $\gamma$ and all $x$, $y$ in a neighborhood of $r$. 
 
 With these assumptions, Theorem 2.3.3 states that there is a ball $B$ around $r$ such that if one starts the Newton iteration inside $B$, it converges quadratically to $r$. But this is really the beginning of the story, not the end.
 
@@ -18,9 +18,9 @@ An extreme variation is to declare that you are only going to compute the Hessia
 
 So maybe we should back down a bit and consider what happens if we do things imprecisely. So suppose that at every iteration we get the Hessian wrong by a matrix $E$ and the gradient by a vector $\epsilon$. Theorem 2.3.4 states that for sufficiently close, etc., there is a constant $K$ such that
 
-$$\|x_+-r\| \le K\left( \|x_c-r\|^2 + \|\E\| \|x_c-r\| + \|\epsilon\|\right ).$$
+$$\|x_+-r\| \le K\left( \|x_c-r\|^2 + \| E\| \|x_c-r\| + \|\epsilon\|\right ).$$
 
-Thus the gradient error $\epsilon$ puts a hard absolute limit on how accurate we can get. Things are more forgiving with the Hessian: if we can get $\|E\|\to 0$ as the iteration proceeds, we will get back to superlinear convergence. 
+Thus the gradient error $\epsilon$ puts a hard absolute limit on how accurate we can get. Things are more forgiving with the Hessian: if we can get $\\|E\\|\to 0$ as the iteration proceeds, we will get back to superlinear convergence. 
 
 
 ## Finite differences

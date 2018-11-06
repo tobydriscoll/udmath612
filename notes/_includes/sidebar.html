@@ -1,0 +1,37 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>{{ site.description }}</p>
+  </div>
+
+  <nav class="sidebar-nav">
+  <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+
+  {% comment %}
+  The code below dynamically generates a sidebar nav of pages in the
+  "notes" collection.
+  {% endcomment %}
+
+  {% assign cs = site.collections | where: "label", "notes" | first %}
+  <ol>
+    {% for chapter in cs.chapters %}    
+    <li>{{chapter}}</li>
+    {% assign items = site.notes | where: "chapter", chapter %}
+    <ul>{% for item in items %}
+      <li><a class="sidebar-nav-item{% if page.url == item.url %} active{% endif %}" href="{{item.url | relative_url}}">{{item.title}}</a></li>{% endfor %}
+    </ul>
+    {% endfor %}
+  </ol>
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+    &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
+  </div>
+</div>

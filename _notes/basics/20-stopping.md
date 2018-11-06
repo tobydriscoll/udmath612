@@ -8,9 +8,9 @@ title: "Stopping"
 
 How do you decide when to stop a Newton iteration? Suppose we have $x_1,x_2,\ldots$ that are hopefully converging to a local minimum $r$ of $f$. When should we halt the process? This can be a surprisingly vexing question in practice.
 
-One issue is absolute versus relative criteria. Say we know $r$ exactly and so can compute the actual error. If we stop when $\|x_n-r\|$ is below some threshold, then we may not get a lot of accurate digits if $\|r\|$ is itself very small. If we try to avoid that by stopping when $\|x_n-r\|/\|r\|$ is below a threshold, then we are being unrealistic if $\|r\|$ is large but $\|f(r)\|$ is not. Usually we have to do an either/or test of the form
+One issue is absolute versus relative criteria. Say we know $r$ exactly and so can compute the actual error. If we stop when $\\|x_n-r\\|$ is below some threshold, then we may not get a lot of accurate digits if $\\|r\\|$ is itself very small. If we try to avoid that by stopping when $\\|x_n-r\\|/\\|r\\|$ is below a threshold, then we are being unrealistic if $\\|r\\|$ is large but $\\|f(r)\\|$ is not. Usually we have to do an either/or test of the form
 
-$$\text{error estimate} \le \epsilon_{\text{abs} + \epsilon_{\text{rel}}|x_n|,$$
+$$\text{error estimate} \le \epsilon_\text{abs} + \epsilon_{\text{rel}}\|x_n\|,$$
 
 which enforces the weaker of the two conditions. 
 

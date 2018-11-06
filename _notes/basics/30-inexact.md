@@ -22,9 +22,9 @@ $$ \| J_c s + F(x_c) \| \le \eta_c \|F(x_c)\|.$$
 
 In both cases you want the "forcing constant" $\eta_c \to 0$. This guarantees superlinear convergence. In practice it can be tricky to balance between having $\eta_c$ approach zero slowly (so that we don't over-solve inaccurate models) and quickly (to be able to capture the asymptotic quadratic convergence). A typical formula is 
 
-$$ \eta_c =  \frac{1}{2} \min\left\{  1, \sqrt{\|g_c\|/\|g_0\|}  \right}.$$
+$$ \eta_c =  \frac{1}{2} \min\left\{  1, \sqrt{\|g_c\|/\|g_0\|}  \right\}.$$
 
-This helps to make $\eta_c$ get small when we get close to optimality. 
+This serves to make $\eta_c$ get small when we get close to optimality. 
 
 ## Black-box finite differences
 

@@ -5,3 +5,4 @@ deps/deps.jl
 */.ipynb_checkpoints
 
 exercises/solutions
+_site

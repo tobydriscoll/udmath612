@@ -16,7 +16,7 @@ The other is the *minimization problem*:
 
 > Given a map $f$ from $\mathbb{R}^m$ to $\mathbb{R}$, find ${r}$ such that $f(r)$ is minimized.
 
-These can be translated back and forth, to some extent. For example, given a vector-valued $F$ whose root we want to find, we can instead seek a minimium of the scalar-valued function $f(x)=\|F(x)\|^2/2$. This is called a *nonlinear least squares problem*. Conversely, given an $f$ we want to minimize, we can search for a root of the gradient $\nabla f$. Thus, statements and algorithms in one of these worlds can be translated into the other. However, the two problems have some distinct features, and for the most part they should be considered separately. 
+These can be translated back and forth, to some extent. For example, given a vector-valued $F$ whose root we want to find, we can instead seek a minimium of the scalar-valued function $f(x)=\\|F(x)\\|^2/2$. This is called a *nonlinear least squares problem*. Conversely, given an $f$ we want to minimize, we can search for a root of the gradient $\nabla f$. Thus, statements and algorithms in one of these worlds can be translated into the other. However, the two problems have some distinct features, and for the most part they should be considered separately. 
 
 ## Multidimensional expansions
 

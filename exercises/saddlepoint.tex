@@ -1,0 +1,15 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{fullpage}
+
+\begin{document}
+
+Let $f(x)=x_1^2-x_2^2$.
+\begin{enumerate}
+\item[(a)] Show that the origin is a saddle point (i.e., stationary with indefinite Hessian).
+\item[(b)] Define $H(x)=\nabla^2f(x)+\mu I$ for constant $\mu>0$. Find a condition on $\mu$ that guarantees that $H(x)$ is positive definite for all $x$. 
+\item[(c)] Consider a modified Newton method based on the quadratic model $q(x) = f(x_c) + g(x_c)^T(x-x_c)+\frac{1}{2} (x-x_c)^TH(x_c)(x-x_c)$, where $g$ is the gradient of $f$ and $H$ is as above with your condition from part~(b). Show that the iteration will not converge to the saddle point unless the second component of the initial guess point $x_0$ is zero. 
+\end{enumerate}
+
+\end{document}

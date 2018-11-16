@@ -10,7 +10,7 @@ The main alternative to a line search strategy is the *trust region subproblem*.
 
 Suppose we are given a quadratic model $q(x)$ based on data at a point $x_c$. We trust the model somewhat, but much less as we get far from $x_c$. So suupose we constrain the mimimization of the model as follows: 
 
-$$\text{argmin}_{\|s\|\le \Delta} q(xc+s),$$
+$$\min_{\|s\|\le \Delta} \: q(xc+s),$$
 
 where $\Delta$ is a parameter known as the *trust radius*. 
 
@@ -26,6 +26,6 @@ Theorem 3.3.3 states an intriguing connection to the Levenberg-Marquardt idea of
 
 $$(H+\mu I)s=-g,$$
 
-where either $\mu=0$ or $\|s\|=\Delta$. In the former case, the Hessian is positive definite and the global minimizer of $q$ lies within the trust region. This is our asymptotic expectation. The alternative is that the TR constraint is "active." This would be necessary if $H$ has negative eigenvalues and thus $q$ has no global minimum, but it can also happen that $H$ is PD and our limited faith in the model is decisive. 
+where either $\mu=0$ or $\\|s\\|=\Delta$. In the former case, the Hessian is positive definite and the global minimizer of $q$ lies within the trust region. This is our asymptotic expectation. The alternative is that the TR constraint is "active." This would be necessary if $H$ has negative eigenvalues and thus $q$ has no global minimum, but it can also happen that $H$ is PD and our limited faith in the model is decisive. 
 
 The downside is that while $\mu$ and $\Delta$ are related, the relationship is not known explicitly. However, it means that in the LM algorithm we don't need to use Armijo and line search. Since using $\mu$ is equivalent to the TR subproblem, the TR convergence theory guarantees that it is enough to adjust $\mu$ and meet the general TR criteria.

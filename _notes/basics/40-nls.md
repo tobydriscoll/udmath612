@@ -34,7 +34,7 @@ $$ \frac{\partial^2 f}{\partial x_i \partial x_j} = \sum_k \frac{\partial F_k}{\
 
 from which we get
 
-$$ \nabla^2f(x) = F'(x)^TF'(x) + \sum_k F_k(x)^T \nabla^2 F_k(x).$$
+$$ \nabla^2f(x) = F'(x)^TF'(x) + \sum_k F_k(x) \nabla^2 F_k(x).$$
 
 (Writing this more compactly would just make us tensor.) Computing those component Hessians is clearly something we want to avoid. 
 

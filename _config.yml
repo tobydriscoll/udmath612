@@ -17,7 +17,7 @@ title: MATH 612
 email: driscoll@udel.edu
 description: >- # this means to ignore newlines until "baseurl:"
  Lecture notes on optimization.
-baseurl: "/udmath612" # the subpath of your site, e.g. /blog
+baseurl: "/notes" # the subpath of your site, e.g. /blog
 url: "localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tobydriscoll
 github_username:  tobydriscoll
@@ -38,7 +38,7 @@ collections:
     - Introduction
     - Basics of Newton-like methods
     - Globalizing convergence
-    - Hessian updating methods
+    - Quasi-Newton methods
      
 tipue_search:
   include:

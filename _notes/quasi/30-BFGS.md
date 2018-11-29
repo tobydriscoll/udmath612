@@ -1,6 +1,6 @@
 ---
 layout: note
-chapter: "Secant-like methods"
+chapter: "Quasi-Newton methods"
 title: "BFGS"
 ---
 * TOC
